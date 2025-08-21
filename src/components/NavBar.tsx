@@ -1,9 +1,40 @@
-import React from 'react'
+"use client";
 
-const NavBar = () => {
+import React, { act, useState } from "react";
+import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
+import { cn } from "../lib/utils/util";
+import Link from "next/link";
+import Image from "next/image";
+
+function NavBar({ className }: { className?: string }) {
+  const [active, setActive] = useState<string | null>(null);
+
   return (
-    <div>NavBar</div>
-  )
+    <div
+      className={cn("fixed top-10 inset-x-0 max-w-2xl border mx-auto z-50",)}
+    > 
+      <Menu setActive={setActive}   >
+        <Link href={"/"}>
+          <MenuItem setActive={setActive} active={active} item="Home">
+            This is home
+          </MenuItem>
+        </Link>
+        <MenuItem setActive={setActive} active={active} item="Our Courses">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/web-dev">All Courses</HoveredLink>
+            <HoveredLink href="/interface-design">Basic Music Theory</HoveredLink>
+            <HoveredLink href="/seo">Advanced Composition</HoveredLink>
+            <HoveredLink href="/branding">Song Writing</HoveredLink>
+            <HoveredLink href="/branding">Music Production</HoveredLink>
+          </div>
+        </MenuItem>
+        <Link href={"/contacts"} >
+         <MenuItem setActive={setActive} active={active} item="Contacts">
+        </MenuItem>
+         </Link>
+      </Menu>
+    </div>
+  );
 }
 
-export default NavBar
+export default NavBar;
