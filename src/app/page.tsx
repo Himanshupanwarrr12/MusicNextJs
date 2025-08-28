@@ -3,7 +3,8 @@ import HeroSection from "@/components/ui/HeroSection";
 export default function Home(){
 return(
   <>
-  <HeroSection/>
+  <h1 className="text-4xl text-center" >Himanshu</h1>
+  {/* <HeroSection  /> */}
   </>
 )
 }
