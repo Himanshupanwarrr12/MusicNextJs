@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 
-
 const transition = {
   type: "spring",
   mass: 0.5,
@@ -11,7 +10,7 @@ const transition = {
   stiffness: 100,
   restDelta: 0.001,
   restSpeed: 0.001,
-};
+} as const;
 
 export const MenuItem = ({
   setActive,
@@ -109,7 +108,12 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({
+  children,
+  ...rest
+}: React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  children: React.ReactNode;
+}) => {
   return (
     <a
       {...rest}
