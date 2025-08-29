@@ -1,10 +1,13 @@
+import FeaturedCourses from "@/components/FeaturedCourses";
 import HeroSection from "@/components/HeroSection";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home(){
 return(
   <>
-  <h1 className="text-4xl text-center" >Himanshu</h1>
   <HeroSection  />
+  <FeaturedCourses/>
+  <WhyChooseUs/>
   </>
 )
 }
