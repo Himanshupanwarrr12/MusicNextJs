@@ -1,7 +1,7 @@
 # 🎵 MusicNextJs
 
 **MusicNextJs** is a **frontend UI project built with Next.js**.  
-I created this project just for fun and to explore how **Next.js** works while building a **music-themed interface**.  
+I created this project just for fun and to explore how **Next.js** & Aceternity UI works while building a **music-themed interface**.  
 
 ---
 
@@ -19,7 +19,7 @@ I created this project just for fun and to explore how **Next.js** works while b
 - [Next.js](https://nextjs.org/)  
 - [React](https://react.dev/)  
 - [TypeScript](https://www.typescriptlang.org/)  
-- [Tailwind CSS](https://tailwindcss.com/) *(if you used it)*  
+- [Tailwind CSS](https://tailwindcss.com/) 
 - [Aceternity UI](https://ui.aceternity.com/)  
 
 ---
